@@ -1344,7 +1344,7 @@ MonoBehaviour:
   velocity: 0
   maxFallingSpeed: -2
   maxHorizontalSpeed: 5
-  jumpForceHardCode: 3
+  jumpForceHardCode: 0.5
   jumpForcePhysics: 9
   jumpForceCodePhysics: 9
 --- !u!212 &1846413743

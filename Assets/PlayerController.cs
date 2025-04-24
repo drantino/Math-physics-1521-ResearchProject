@@ -95,8 +95,8 @@ public class PlayerController : MonoBehaviour
                     }
                     if(_onConveyor)
                     {
-                        //_rb.position += new Vector2(-5*Time.deltaTime,0);
-                        _rb.AddForce(Vector2.left * 20);
+                        _rb.position += new Vector2(-5*Time.deltaTime,0);
+                        //_rb.AddForce(Vector2.left * 20);
                     }
 
                     break;
