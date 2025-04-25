@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
         if (_grounded && !_jumping && _jump.WasPressedThisFrame())
         {
             _jumping = true;
-
         }
         
     }
@@ -57,13 +56,11 @@ public class PlayerController : MonoBehaviour
                     if (_grounded && velocity <0)
                     {
                         velocity = 0;
-                        //transform.position = new Vector3(transform.position.x,groundCheck.position.y +
-                        //    (GetComponent<Renderer>().bounds.min.y),transform.position.y);
                     }
 
                     //horizontal movement
-                    Vector2 movement = _move.ReadValue<Vector2>();
-                    float hori = movement.x * speed * Time.deltaTime;
+                    horizontalMovement = _move.ReadValue<Vector2>().x;
+                    float hori = horizontalMovement * speed * Time.deltaTime;
 
                     if(_wallLeft && hori < 0)
                     {
